@@ -1,0 +1,10 @@
+#!/bin/sh
+
+locale=$(xkb-switch)
+
+if [ $locale == us ] 
+then
+	setxkbmap -layout ru
+else 
+	setxkbmap -layout us
+fi

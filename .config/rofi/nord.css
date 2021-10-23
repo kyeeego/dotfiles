@@ -1,0 +1,125 @@
+configuration {
+
+    font: "SFMono 12";
+    width: 30;
+    line-margin: 10;
+
+    display-ssh:    "";
+    display-run:    "";
+    display-drun:   "";
+    display-window: "";
+    display-combi:  "";
+    show-icons:     false;
+}
+
+* {
+    c0: #2e3440;
+    c1: #3b4252;
+    c2: #434c5e;
+    c3: #4c566a;
+
+    c4: #d8dee9;
+    c5: #e5e9f0;
+    c6: #eceff4;
+
+    c7: #8fbcbb;
+    c8: #88c0d0;
+    c9: #81a1c1;
+    c10: #5e81ac;
+    c11: #bf616a;
+
+    c12: #d08770;
+    c13: #ebcb8b;
+    c14: #a3be8c;
+    c15: #b48ead;
+
+    foreground:  @c9;
+    backlight:   #ccffeedd;
+    background-color:  transparent;
+    
+    highlight:     underline bold #eceff4;
+
+    /* #223e4f */
+    transparent: rgba(34,62,79,0.65);
+}
+
+window {
+    location: center;
+    anchor:   center;
+    padding: 10px;
+    width: 50%;
+    height: 50%;
+
+    background-color: @transparent;
+    spacing: 0;
+    children:  [mainbox];
+    orientation: horizontal;
+}
+
+mainbox {
+    children: [ inputbar, message, listview ];
+}
+
+message {
+    color: @c0;
+    padding: 5;
+    border-color: @foreground;
+    border:  0px 2px 2px 2px;
+    background-color: @c7;
+}
+
+inputbar {
+    color: @c6;
+    padding: 11px;
+
+    border-radius:  6px ;
+}
+
+entry, prompt, case-indicator {
+    text-font: inherit;
+    text-color:inherit;
+}
+
+prompt {
+    margin: 0px 0.3em 0em 0em ;
+}
+
+listview {
+    padding: 8px;
+    border-radius: 0px 0px 6px 6px;
+    border: 0px 1px 1px 1px;
+    dynamic: false;
+}
+
+element {
+    padding: 3px;
+    vertical-align: 0.5;
+    border-radius: 4px;
+    color: @foreground;
+    text-color: rgb(216, 222, 233);
+}
+
+element selected.normal {
+	background-color: @c7;
+	text-color: #2e3440;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+button {
+    padding: 6px;
+    color: @foreground;
+    horizontal-align: 0.5;
+
+    border: 2px 0px 2px 2px;
+    border-radius: 4px 0px 0px 4px;
+    border-color: @foreground;
+}
+
+button selected normal {
+    border: 2px 0px 2px 2px;
+    border-color: @foreground;
+}
