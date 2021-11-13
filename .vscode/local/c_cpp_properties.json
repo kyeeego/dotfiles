@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include",
+                "/usr/local/include",
+                "/usr/lib/gcc/x86_64-pc-linux-gnu/11.1.0/include",
+                "/usr/src/linux/include",
+                "/usr/src/linux/include/uapi",
+                "/usr/src/linux/arch/x86/include",
+                "/usr/src/linux/arch/x86/include/uapi",
+                "/usr/src/linux/arch/x86/include/generated"
+            ],
+            "defines": [
+                "__GCC__",
+                "__KERNEL__"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

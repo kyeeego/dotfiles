@@ -17,9 +17,8 @@ bindsym F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym F4 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-bindsym $alt+Shift+1 exec setxkbmap -layout us
+bindsym $alt+Shift+1 exec setxkbmap -layout lv
 bindsym $alt+Shift+2 exec setxkbmap -layout ru
-bindsym $alt+Shift+3 exec setxkbmap -layout ua
 
 bindsym Print exec flameshot gui
 
@@ -112,7 +111,7 @@ client.unfocused        $ibgcolor    $ibgcolor     $itextcolor    $indicator
 client.focused_inactive $ibgcolor    $ibgcolor     $itextcolor    $indicator
 client.urgent           $ubgcolor    $ubgcolor     $textcolor     $indicator
 
-bindsym F12 exec setxkbmap -layout us && i3lock -i ~/Documents/Wallpapers/mountains.png -c '#000000' -o '#191d0f' -w '#572020' -l '#223e4f' -e 
+bindsym F12 exec setxkbmap -layout lv && i3lock -i ~/Documents/Wallpapers/mountains.png -c '#000000' -o '#191d0f' -w '#572020' -l '#223e4f' -e 
 default_border pixel 1
 default_floating_border pixel 1
 
@@ -120,5 +119,4 @@ gaps inner 20
 gaps outer 0
 
 exec_always compton --config ~/.config/compton/compton.conf
-# exec_always picom --experimental-backends
 exec_always --no-startup-id ~/.config/polybar/launch.sh

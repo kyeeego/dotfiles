@@ -1,0 +1,67 @@
+{
+    "workbench.colorCustomizations": {
+        "editor.background": "#223e4f",
+        "activityBar.background": "#223e4f",
+        "sideBar.background": "#223e4f",
+        "sideBar.border": "#1a2e3a",
+        "menu.background": "#1a2e3a",
+        "statusBar.background": "#1a2e3a",
+        "editorGroupHeader.tabsBackground": "#1a2e3a",
+        "editorGroupHeader.noTabsBackground": "#1a2e3a",
+        "tab.inactiveBackground": "#1a2e3a",
+        "editor.lineHighlightBorder": "#223e4f",
+        "input.background": "#223e4f",
+        "list.hoverBackground": "#1a2e3a",
+        "editorHoverWidget.background": "#1a2e3a",
+        "editorWidget.background": "#1a2e3a",
+        "editorWidget.border": "#1a2e3a",
+        "list.activeSelectionBackground": "#2a3e4a",
+        "editorIndentGuide.background": "#223e4f",
+        "editorIndentGuide.activeBackground": "#223e4f"
+    },
+    "editor.tokenColorCustomizations": {
+        "functions": "#c07070",
+        "keywords": "#70c0b1",
+        "types": "#70c0b1",
+        "numbers": "#f78c6c",
+        "strings": "#b9ca4a",
+        "variables": "#c3d3de",
+        "textMateRules": [
+            {
+                "scope": [
+                    "keyword",
+                    "variable.language",
+                    "storage.modifier",
+                    "constant.language"
+                ],
+                "settings": {
+                    "foreground": "#70c0b1",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "entity.name.type",
+                "settings": {
+                    "foreground": "#9dc070",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": [
+                    "keyword.operator",
+                    "entity.name.namespace"
+                ],
+                "settings": {
+                    "foreground": "#c5c8c6"
+                }
+            }
+        ]
+    },
+    "editor.fontFamily": "'SF Mono'",
+    "editor.fontSize": 17,
+    "window.menuBarVisibility": "toggle",
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "breadcrumbs.enabled": false,
+    "glassit.alpha": 225
+}
