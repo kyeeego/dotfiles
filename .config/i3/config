@@ -12,17 +12,23 @@ set $indicator  #2F343F
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+# Spotify controls
+bindsym F9 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+bindsym F11 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+bindsym F12 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+
 bindsym F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym F4 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-bindsym $alt+Shift+1 exec setxkbmap -layout lv
+bindsym $alt+Shift+1 exec setxkbmap -layout pl
 bindsym $alt+Shift+2 exec setxkbmap -layout ru
+bindsym $alt+Shift+3 exec setxkbmap -layout lat_ru
 
 bindsym Print exec flameshot gui
 
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 bindsym $mod+Shift+q kill
 
@@ -79,10 +85,20 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+assign [class="Alacritty"] $ws1
+
 assign [class="firefox"] $ws2
 assign [class="qutebrowser"] $ws2
-assign [class="Alacritty"] $ws1
+
 assign [class="Emacs"] $ws3
+assign [class="Code"] $ws3
+
+assign [class="TelegramDesktop"] $ws4
+assign [class="discord"] $ws4
+
+assign [class="Steam"] $ws5
+
+assign [class="Spotify"] $ws10
 
 for_window [class=".*"] border pixel 0
 
@@ -111,7 +127,7 @@ client.unfocused        $ibgcolor    $ibgcolor     $itextcolor    $indicator
 client.focused_inactive $ibgcolor    $ibgcolor     $itextcolor    $indicator
 client.urgent           $ubgcolor    $ubgcolor     $textcolor     $indicator
 
-bindsym F12 exec setxkbmap -layout lv && i3lock -i ~/Documents/Wallpapers/mountains.png -c '#000000' -o '#191d0f' -w '#572020' -l '#223e4f' -e 
+bindsym Pause exec setxkbmap -layout pl && i3lock -i ~/Documents/Wallpapers/mountains.png -c '#000000' -o '#191d0f' -w '#572020' -l '#223e4f' -e 
 default_border pixel 1
 default_floating_border pixel 1
 
